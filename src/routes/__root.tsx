@@ -81,10 +81,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Diagnóstico B.L.I.N.D.A.® — Maturidade Institucional para Clínicas de Estética" },
       { name: "description", content: "Descubra em poucos minutos o nível de organização jurídica e operacional da sua clínica de estética com o Método B.L.I.N.D.A.®." },
       { name: "author", content: "Dra. Kátia Damasceno" },
-      { property: "og:title", content: "Diagnóstico B.L.I.N.D.A.® — Maturidade Institucional" },
-      { property: "og:description", content: "A excelência da estética começa com a segurança jurídica." },
+      { property: "og:title", content: "Diagnóstico B.L.I.N.D.A.® — Maturidade Institucional para Clínicas de Estética" },
+      { property: "og:description", content: "Descubra em poucos minutos o nível de organização jurídica e operacional da sua clínica de estética com o Método B.L.I.N.D.A.®." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Diagnóstico B.L.I.N.D.A.® — Maturidade Institucional para Clínicas de Estética" },
+      { name: "twitter:description", content: "Descubra em poucos minutos o nível de organização jurídica e operacional da sua clínica de estética com o Método B.L.I.N.D.A.®." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/871d11bc-1f28-42a2-8f52-75726503e41f/id-preview-e41701e8--2c5260a5-c5a5-4554-aa8f-f9b1035d2d48.lovable.app-1784206198006.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/871d11bc-1f28-42a2-8f52-75726503e41f/id-preview-e41701e8--2c5260a5-c5a5-4554-aa8f-f9b1035d2d48.lovable.app-1784206198006.png" },
     ],
     links: [
       {
