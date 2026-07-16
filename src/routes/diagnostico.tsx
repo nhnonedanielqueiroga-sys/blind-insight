@@ -40,7 +40,7 @@ function DiagnosticoPage() {
 
   const salvar = useServerFn(salvarDiagnostico);
 
-  const pergunta = PERGUNTAS[index];
+  const pergunta = PERGUNTAS[Math.min(index, TOTAL_PERGUNTAS - 1)];
   const resultado = useMemo(() => calcularResultado(respostas), [respostas]);
 
   function responder(r: Resposta) {
@@ -115,7 +115,7 @@ function DiagnosticoPage() {
       </header>
 
       <main className="mx-auto max-w-4xl px-6 py-12 md:py-16">
-        {etapa === "perguntas" && (
+        {etapa === "perguntas" && pergunta && (
           <div className="space-y-10">
             <QuizProgress current={index + 1} total={TOTAL_PERGUNTAS} pilar={pergunta.pilar} />
             <QuestionCard
