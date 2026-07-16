@@ -59,29 +59,42 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-gold: var(--gold);
+  --color-espresso: var(--espresso);
+  --color-beige: var(--beige);
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --radius: 0.75rem;
+  /* Bege premium #FAF8F5 */
+  --background: oklch(0.980 0.006 70);
+  /* Deep espresso #3D312A */
+  --foreground: oklch(0.290 0.020 45);
+  /* Card em bege mais quente #F3ECE4 */
+  --card: oklch(0.945 0.014 65);
+  --card-foreground: oklch(0.290 0.020 45);
+  --popover: oklch(0.980 0.006 70);
+  --popover-foreground: oklch(0.290 0.020 45);
+  /* Rose Gold #BD9885 */
+  --primary: oklch(0.680 0.055 45);
+  --primary-foreground: oklch(0.980 0.006 70);
+  --secondary: oklch(0.925 0.018 65);
+  --secondary-foreground: oklch(0.290 0.020 45);
+  --muted: oklch(0.930 0.012 65);
+  --muted-foreground: oklch(0.480 0.025 50);
+  /* Dourado muted #D4AF37 */
+  --accent: oklch(0.780 0.120 90);
+  --accent-foreground: oklch(0.290 0.020 45);
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --destructive-foreground: oklch(0.980 0.006 70);
+  --border: oklch(0.885 0.018 65);
+  --input: oklch(0.900 0.015 65);
+  --ring: oklch(0.680 0.055 45);
+  --gold: oklch(0.780 0.120 90);
+  --espresso: oklch(0.290 0.020 45);
+  --beige: oklch(0.980 0.006 70);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -140,5 +153,10 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
   }
 }
