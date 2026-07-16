@@ -14,7 +14,60 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      diagnosticos: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          nivel: string
+          nome: string
+          nome_clinica: string
+          respostas: Json
+          score_auditoria: number
+          score_base_regulatoria: number
+          score_diagnostico: number
+          score_integridade_documental: number
+          score_lideranca: number
+          score_normatizacao: number
+          score_total: number
+          whatsapp: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          nivel: string
+          nome: string
+          nome_clinica: string
+          respostas: Json
+          score_auditoria: number
+          score_base_regulatoria: number
+          score_diagnostico: number
+          score_integridade_documental: number
+          score_lideranca: number
+          score_normatizacao: number
+          score_total: number
+          whatsapp: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          nivel?: string
+          nome?: string
+          nome_clinica?: string
+          respostas?: Json
+          score_auditoria?: number
+          score_base_regulatoria?: number
+          score_diagnostico?: number
+          score_integridade_documental?: number
+          score_lideranca?: number
+          score_normatizacao?: number
+          score_total?: number
+          whatsapp?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
