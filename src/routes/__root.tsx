@@ -77,14 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Diagnóstico B.L.I.N.D.A.® — Maturidade Institucional para Clínicas de Estética" },
+      { name: "description", content: "Descubra em poucos minutos o nível de organização jurídica e operacional da sua clínica de estética com o Método B.L.I.N.D.A.®." },
+      { name: "author", content: "Dra. Kátia Damasceno" },
+      { property: "og:title", content: "Diagnóstico B.L.I.N.D.A.® — Maturidade Institucional" },
+      { property: "og:description", content: "A excelência da estética começa com a segurança jurídica." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
