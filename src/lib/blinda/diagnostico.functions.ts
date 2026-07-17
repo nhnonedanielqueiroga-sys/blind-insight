@@ -38,7 +38,7 @@ export const salvarDiagnostico = createServerFn({ method: "POST" })
       auth: { storage: undefined, persistSession: false, autoRefreshToken: false },
     });
 
-    const { data: inserted, error } = await supabase
+    const { error } = await supabase
       .from("diagnosticos")
       .insert({
         nome: data.nome,
@@ -54,9 +54,7 @@ export const salvarDiagnostico = createServerFn({ method: "POST" })
         score_diagnostico: data.score_diagnostico,
         score_auditoria: data.score_auditoria,
         nivel: data.nivel,
-      })
-      .select("id")
-      .single();
+      });
 
     if (error) {
       console.error("[salvarDiagnostico]", error);
@@ -81,5 +79,5 @@ export const salvarDiagnostico = createServerFn({ method: "POST" })
       console.error("[salvarDiagnostico] notificação falhou", notifyErr);
     }
 
-    return { id: inserted.id as string };
+    return { ok: true as const };
   });
