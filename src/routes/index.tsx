@@ -16,6 +16,7 @@ import { BrandMark } from "@/components/blinda/BrandMark";
 import { InstitutionalFooter } from "@/components/blinda/InstitutionalFooter";
 import { PILARES, type PilarKey } from "@/lib/blinda/questions";
 import { useReveal } from "@/hooks/use-reveal";
+import draKatiaAsset from "@/assets/dra-katia.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -109,8 +110,13 @@ function HomePage() {
               className="pointer-events-none absolute -right-16 -top-16 hidden h-48 w-48 rounded-full border border-accent/20 md:block"
             />
             <div className="grid gap-10 md:grid-cols-[auto_1fr] md:items-center md:gap-14">
-              <div className="mx-auto flex h-32 w-32 shrink-0 items-center justify-center rounded-full border border-accent bg-background text-[color:var(--gold)] md:mx-0">
-                <span className="font-serif text-6xl italic">K</span>
+              <div className="mx-auto h-32 w-32 shrink-0 overflow-hidden rounded-full border-2 border-[color:var(--gold)] bg-background shadow-[0_10px_30px_-12px_color-mix(in_oklab,var(--gold)_50%,transparent)] md:mx-0">
+                <img
+                  src={draKatiaAsset.url}
+                  alt="Dra. Kátia Damasceno, criadora do Método B.L.I.N.D.A.®"
+                  className="h-full w-full object-cover object-top"
+                  loading="lazy"
+                />
               </div>
               <div className="min-w-0 text-center md:text-left">
                 <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
