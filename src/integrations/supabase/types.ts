@@ -68,6 +68,36 @@ export type Database = {
         }
         Relationships: []
       }
+      lista_espera_workshop: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          nome: string
+          observacoes: string | null
+          origem: string | null
+          whatsapp: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          nome: string
+          observacoes?: string | null
+          origem?: string | null
+          whatsapp: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          nome?: string
+          observacoes?: string | null
+          origem?: string | null
+          whatsapp?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string
