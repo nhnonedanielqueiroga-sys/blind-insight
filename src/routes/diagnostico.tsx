@@ -58,6 +58,32 @@ function DiagnosticoPage() {
   }
 
   async function submeterLead(data: LeadData) {
+    // Garante que temos exatamente 20 respostas antes de enviar.
+    const respostasArray = PERGUNTAS.map((p) => ({
+      id: p.id,
+      resposta: respostas[p.id],
+    }));
+    const faltantes = respostasArray
+      .filter((r) => !r.resposta)
+      .map((r) => r.id);
+
+    // Log temporário para diagnosticar captura das respostas.
+    console.log("[diagnostico] respostas", {
+      total: respostasArray.length,
+      preenchidas: respostasArray.length - faltantes.length,
+      faltantes,
+      respostas,
+    });
+
+    if (faltantes.length > 0) {
+      toast.error(
+        `Faltam responder as perguntas: ${faltantes.join(", ")}. Volte e complete o questionário.`,
+      );
+      setEtapa("perguntas");
+      setIndex(PERGUNTAS.findIndex((p) => p.id === faltantes[0]));
+      return;
+    }
+
     setLead(data);
     setEtapa("loading");
     const r = calcularResultado(respostas);
@@ -68,10 +94,7 @@ function DiagnosticoPage() {
           email: data.email,
           whatsapp: data.whatsapp,
           nome_clinica: data.nome_clinica,
-          respostas: Object.entries(respostas).map(([id, resposta]) => ({
-            id: Number(id),
-            resposta,
-          })),
+          respostas: respostasArray as { id: number; resposta: Resposta }[],
           score_total: r.scoreTotal,
           score_base_regulatoria: r.scorePorPilar.B,
           score_lideranca: r.scorePorPilar.L,
