@@ -20,6 +20,27 @@ export function InstitutionalFooter() {
           <p className="mt-2 text-[10px] uppercase tracking-[0.25em]">
             Método B.L.I.N.D.A.® — Governança Preventiva para Clínicas de Estética
           </p>
+          <div className="mt-6 space-y-1 text-xs leading-relaxed text-[color:oklch(0.980_0.006_70/0.75)]">
+            <p>
+              <a
+                href="mailto:dra.katia.damasceno.am@gmail.com"
+                className="underline-offset-4 hover:text-[color:oklch(0.980_0.006_70)] hover:underline"
+              >
+                dra.katia.damasceno.am@gmail.com
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://wa.me/5592982822119"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline-offset-4 hover:text-[color:oklch(0.980_0.006_70)] hover:underline"
+              >
+                Falar no WhatsApp
+              </a>
+              <span className="ml-2 text-[color:oklch(0.980_0.006_70/0.5)]">(92) 98282-2119</span>
+            </p>
+          </div>
           <p className="mt-8 text-[10px] uppercase tracking-[0.25em] text-[color:oklch(0.780_0.120_90)]">
             A excelência da estética começa com a segurança jurídica.
           </p>
