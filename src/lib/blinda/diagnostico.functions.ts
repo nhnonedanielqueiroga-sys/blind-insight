@@ -63,5 +63,23 @@ export const salvarDiagnostico = createServerFn({ method: "POST" })
       throw new Error("Não foi possível salvar o diagnóstico.");
     }
 
+    // Notifica Dra. Kátia (fire-and-forget — não bloqueia a resposta).
+    try {
+      const { notificarNovoLead } = await import("./notify.server");
+      await notificarNovoLead({
+        origem: "diagnostico",
+        nome: data.nome,
+        email: data.email,
+        whatsapp: data.whatsapp,
+        extra: {
+          clinica: data.nome_clinica,
+          score_total: data.score_total,
+          nivel: data.nivel,
+        },
+      });
+    } catch (notifyErr) {
+      console.error("[salvarDiagnostico] notificação falhou", notifyErr);
+    }
+
     return { id: inserted.id as string };
   });
